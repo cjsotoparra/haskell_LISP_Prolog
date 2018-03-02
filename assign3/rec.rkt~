@@ -1,0 +1,13 @@
+#lang racket
+(define (flatten l)
+  (cond
+    ((empty? l) empty)
+    ((list? l)
+      (append (flatten (car l))
+              (flatten (cdr l))))
+    (else (list l))
+    )
+  )
+
+(require racket/trace)
+(trace flatten)

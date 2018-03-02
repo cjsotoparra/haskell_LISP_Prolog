@@ -1,0 +1,59 @@
+translate("a", "4").
+translate("b", "b").
+translate("c", "<").
+translate("c", "k").
+translate("d", "|>").
+translate("e", "3").
+translate("f", "ph").
+translate("g", "g").
+translate("g", "9").
+translate("h", "h").
+translate("i", "1").
+translate("j", "j").
+translate("k", "|").
+translate("l", "1").
+translate("m", "/\\/\\").
+translate("n", "/\\/").
+translate("o", "0").
+translate("p", "p").
+translate("q", "q").
+translate("r", "r").
+translate("s", "5").
+translate("t", "7").
+translate("t", "+").
+translate("u", "u").
+translate("v", "v").
+translate("w", "\\/\\/").
+translate("x", "x").
+translate("y", "y").
+translate("z", "z").
+translate(" ", " ").
+translate(".", ".").
+translate("!", "!").
+translate("?", "?").
+translate("-", "-").
+translate(";", ";").
+translate(":", ":").
+translate(",", ",").
+
+isUpper(H):-
+        H > 64, H < 98.
+
+toLowerH(H,R):-
+       isUpper(H),
+       R is H + 32.
+toLowerH(L,L):- \+(isUpper(L)).
+
+tolower([], []).
+tolower([H|T], [R|L]):-
+        toLowerH(H,R), tolower(T,L).  
+
+reverse1([],[]).
+reverse1([X|Q], Z):-
+        reverse1(Q,Y), append(Y,[X],Z).
+
+
+english2133t([],[]).
+english2133t([H|T], [R|E]):-
+        translate([H],[R]), english2133t(T,E).
+

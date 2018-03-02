@@ -1,0 +1,18 @@
+1.   X = 20.
+2.   X = 4*5.
+3.   false.
+4.   X = Y, Y = Pear, Pear = Z, Z = apple.
+5.   X = Z, Z = Y, Y = apple.
+6.   true.
+7.   X = 4,
+     Y = 5.
+8.   X = 4.
+9.   X = Y, Y = Z, Z = apple.
+10.  X = fruit(apple, good).
+11.  X = apple,
+     Y = good.
+12.  X = apple,
+     Y = good.
+13.  false.
+14.  X = Y, Y = Z, Z = W, W = apple.
+15.  X = Y, Y = pear.
